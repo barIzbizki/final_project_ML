@@ -1,10 +1,4 @@
-"""Performance vs. number of features -- the 'sweet spot' curve.
 
-For each model and each feature-count k, take the BEST subset of that size (max metric),
-so the line is the best achievable performance at each k. Shows F1 and ROC AUC peaking
-around k=7 and then declining (SVM/MLP) or staying flat (XGBoost), with KNN rising toward
-the full set. Same house palette as the other archive3 charts.
-"""
 import matplotlib
 
 matplotlib.use("Agg")
@@ -43,7 +37,7 @@ def main():
     df = pd.read_csv(OUTPUT_DIR / "constrained_feature_selection_all_models.csv")
     df["k"] = df["k"].astype(int)
     ks = sorted(df["k"].unique())
-    # best subset of each size, per model
+    
     best = {}
     for m in MODELS:
         sub = df[df.model == m]
@@ -51,7 +45,7 @@ def main():
             rows = sub[sub.k == k]
             best[(m, k)] = rows.loc[rows.f1.idxmax()]  # best-F1 subset of this size
 
-    # for AUC use the best-AUC subset of each size instead
+    
     bestA = {}
     for m in MODELS:
         sub = df[df.model == m]

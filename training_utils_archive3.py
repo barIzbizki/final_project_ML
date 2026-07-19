@@ -18,9 +18,7 @@ from preprocessing import create_preprocessor
 
 
 def subsample_for_svm(X_train: pd.DataFrame, y_train: pd.Series):
-    # See SVM_MAX_TRAIN_ROWS in config_archive3.py for why only this model is subsampled.
-    # The test set is untouched, so test metrics stay measured on the same rows as every
-    # other model -- only the amount of training data the SVM sees differs.
+   
     if len(X_train) <= SVM_MAX_TRAIN_ROWS:
         return X_train, y_train
     X_sub, _, y_sub, _ = train_test_split(
@@ -57,8 +55,7 @@ def fit_best_pipeline(X_train: pd.DataFrame, y_train: pd.Series, model: object, 
         param_grid["pca__n_components"] = PCA_VARIANCE_OPTIONS
     if isinstance(model, KNeighborsClassifierGPU):
         param_grid["model__n_neighbors"] = [5, 7, 9, 11, 15, 21]
-        # cuML's KNN ignores `p` (swallowed by **kwargs, always Euclidean); `metric` is
-        # the parameter it actually honours. See models_gpu.py.
+       
         param_grid["model__metric"] = ["manhattan", "euclidean"]
     cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=RANDOM_STATE)
     # n_jobs capped (not -1): this dataset has 253k rows, and SMOTE-oversampled
@@ -69,8 +66,7 @@ def fit_best_pipeline(X_train: pd.DataFrame, y_train: pd.Series, model: object, 
 
 
 def find_best_threshold(estimator, X_train: pd.DataFrame, y_train: pd.Series, cv) -> float:
-    # Out-of-fold probabilities on training data only: the threshold is never
-    # fit against X_test/y_test, so choosing it here cannot leak into the test score.
+  
     oof_probs = cross_val_predict(estimator, X_train, y_train, cv=cv, method="predict_proba", n_jobs=4)[:, 1]
     precision, recall, thresholds = precision_recall_curve(y_train, oof_probs)
     f1_scores = 2 * precision * recall / (precision + recall + 1e-12)

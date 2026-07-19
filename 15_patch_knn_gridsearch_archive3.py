@@ -1,12 +1,4 @@
-"""Recompute ONLY the KNN rows of constrained_feature_selection_all_models with
-GridSearchCV (5-fold, F1) over n_neighbors + metric -- identical to the rest of archive3
-(training_utils_archive3.fit_best_pipeline) -- and patch them into the existing results.
 
-SVM / XGBoost / MLP are deterministic and unchanged, so their rows are kept as-is; only
-KNN switched from a manual validation loop to GridSearchCV model selection. This avoids
-re-running the slow CPU MLP fits. Produces the same table 13_..._all_models.py would now
-produce for KNN. Run 13 end-to-end instead if you want everything regenerated from scratch.
-"""
 import json
 
 import numpy as np
@@ -98,7 +90,7 @@ def main():
         print(f"{label:20s} KNN (k={len(feats):2d}) | F1={m['f1']:.4f} AUC={m['roc_auc']:.4f} "
               f"| best K={m['n_neighbors']} metric={m['knn_metric']}")
 
-    # patch: drop old KNN rows, append the GridSearchCV ones, keep original combo order
+
     csv_path = OUTPUT_DIR / "constrained_feature_selection_all_models.csv"
     old = pd.read_csv(csv_path)
     if "knn_metric" not in old.columns:

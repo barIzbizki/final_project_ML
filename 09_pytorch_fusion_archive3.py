@@ -1,24 +1,4 @@
-"""Trains new_roni.py's MultimodalLateFusionNN on the Merged dataset.
 
-new_roni.py only defines the Dataset and the model architecture -- no training loop,
-loss, optimizer, or data loading exists there. Everything below (splitting, scaling,
-imbalance handling, the training loop, threshold selection, evaluation) had to be
-written to actually run it. Choices made, to keep results comparable to the rest of
-the study:
-
-* Same shared 80/20 patient split as every other model (create_shared_split), so the
-  test set here is the identical 50,736 rows used everywhere else in archive3.
-* Each branch (clinical / lifestyle) is median-imputed and standard-scaled separately,
-  fit on the training data only -- mirroring preprocessing.py's numeric pipeline.
-* The other models handle the 9.4% positive rate with SMOTE (oversampling) or
-  class_weight='balanced'. This model's loss/architecture were given as-is, so instead
-  of changing them, imbalance is handled at the sampling level with a
-  WeightedRandomSampler -- the same idea as SMOTE (see positives more often during
-  training) without altering the network or loss the file defined.
-* A 15% validation split carved from the training data drives early stopping and
-  threshold selection, the same role validation_fraction=0.15 plays for the sklearn
-  MLP in models_gpu.py. The test set is never touched by either.
-"""
 import time
 import numpy as np
 import pandas as pd
@@ -41,11 +21,6 @@ VALIDATION_FRACTION = 0.15
 
 
 def create_shared_split(df: pd.DataFrame):
-    # Duplicated from training_utils_archive3.create_shared_split rather than imported:
-    # that module imports cuml at module level, which is not installed in this script's
-    # venv (venv_torch, kept separate from the cuML/XGBoost venv -- see run_new_models.sh).
-    # Same RANDOM_STATE/TEST_SIZE/columns, so the split is bit-identical to every other
-    # model's train/test partition.
     train_ids, test_ids = train_test_split(
         df[ID_COLUMN], test_size=TEST_SIZE, random_state=RANDOM_STATE, stratify=df[TARGET_COLUMN]
     )

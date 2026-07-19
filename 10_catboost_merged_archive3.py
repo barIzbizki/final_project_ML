@@ -9,10 +9,7 @@ from new_roni2 import train_catboost_model
 
 
 def create_shared_split(df: pd.DataFrame):
-    # Duplicated from training_utils_archive3.create_shared_split rather than imported:
-    # that module imports cuml at module level, which is not installed in this script's
-    # venv (venv_torch, kept separate from the cuML/XGBoost venv). Same RANDOM_STATE/
-    # TEST_SIZE/columns, so the split is bit-identical to every other model's split.
+
     train_ids, test_ids = train_test_split(
         df[ID_COLUMN], test_size=TEST_SIZE, random_state=RANDOM_STATE, stratify=df[TARGET_COLUMN]
     )

@@ -1,14 +1,4 @@
-"""Forward-selection experiment on the Merged feature set.
 
-Ranks features by XGBoost gain importance (the fully-trained tree model -- CatBoost
-early-stopped at 42 iterations and zeroed out most features, so its importances are
-unreliable here), then trains XGBoost on the top-k features for increasing k. The goal
-is to find the smallest feature subset that retains most of the full-model F1/AUC.
-
-Consistent with the rest of archive3: same shared 80/20 patient split, SMOTE on the
-training folds only, decision threshold tuned on a held-out validation slice (never the
-test set), test metrics measured on the identical 50,736-row test set.
-"""
 import json
 import numpy as np
 import pandas as pd
@@ -22,7 +12,6 @@ from xgboost import XGBClassifier
 from config_archive3 import ID_COLUMN, OUTPUT_DIR, RANDOM_STATE, TARGET_COLUMN, TEST_SIZE
 from data_utils_archive3 import load_original_data
 
-# XGBoost gain ranking from merged_xgboost_no_pca (see 11 analysis); most→least important.
 RANKED_FEATURES = [
     "Age", "HighBP", "GenHlth", "HighChol", "Sex", "PhysHlth", "Income", "BMI",
     "Smoker", "Education", "DiffWalk", "MentHlth", "Stroke", "HvyAlcoholConsump",

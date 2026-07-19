@@ -7,8 +7,7 @@ from config import RANDOM_STATE
 
 def create_models():
     return {
-        # n_neighbors and p are overridden by GridSearchCV in training_utils.py (see PCA_VARIANCE_OPTIONS grid);
-        # these are only the fallback values used if a caller trains this model outside that search.
+ 
         "KNN": KNeighborsClassifier(n_neighbors=21, weights="distance", p=1),
         "SVM": SVC(kernel="rbf", C=1.0, gamma="scale", probability=True, class_weight="balanced", random_state=RANDOM_STATE),
         "XGBoost": XGBClassifier(n_estimators=300, max_depth=5, learning_rate=0.05, subsample=0.85, colsample_bytree=0.85, objective="binary:logistic", eval_metric="logloss", random_state=RANDOM_STATE, n_jobs=-1),

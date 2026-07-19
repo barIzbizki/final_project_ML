@@ -1,14 +1,4 @@
-"""Constrained feature selection on the Merged (fused) archive3 dataset.
 
-Unlike 11_feature_selection (which ranked all 21 features together and produced an
-all-clinical top-5), this keeps BOTH parts of the fusion: it picks the strongest
-clinical/demographic features AND the strongest lifestyle features, so every candidate
-subset contains features from both groups. That preserves the fusion the study is about
-while still reducing the feature count.
-
-Within-group ranking is by XGBoost gain importance (the fully-trained tree model).
-Same split / SMOTE / validation-tuned-threshold protocol as the rest of archive3.
-"""
 import json
 import numpy as np
 import pandas as pd
@@ -22,7 +12,7 @@ from xgboost import XGBClassifier
 from config_archive3 import ID_COLUMN, OUTPUT_DIR, RANDOM_STATE, TARGET_COLUMN, TEST_SIZE
 from data_utils_archive3 import load_original_data
 
-# within-group rankings by XGBoost gain (from merged_xgboost_no_pca), most -> least
+
 CLINICAL_RANKED = [
     "Age", "HighBP", "GenHlth", "HighChol", "Sex", "PhysHlth", "Income", "BMI",
     "Education", "DiffWalk", "MentHlth", "Stroke", "CholCheck", "Diabetes",
@@ -32,7 +22,7 @@ LIFESTYLE_RANKED = [
     "NoDocbcCost", "AnyHealthcare",
 ]
 
-# (n_clinical, n_lifestyle) combinations to test -- every one keeps both parts
+# (n_clinical, n_lifestyle) 
 COMBOS = [
     (3, 1), (3, 2), (4, 2), (5, 2), (5, 3), (4, 3), (6, 2), (6, 3), (7, 3), (5, 5),
 ]
@@ -89,7 +79,7 @@ def main():
     print(f"train={len(train_df)} val={len(val_df)} test={len(test_df)}")
 
     rows = []
-    # reference rows: all clinical (14), all 21
+    
     for name, feats in [("all-21 (both parts)", CLINICAL_RANKED + LIFESTYLE_RANKED)]:
         m = evaluate(feats, train_df, val_df, test_df)
         rows.append({"combo": name, "n_clinical": 14, "n_lifestyle": 7, "k": 21,

@@ -1,21 +1,4 @@
-"""GPU-backed model factory for the archive3 pipeline.
 
-Mirrors create_models() in models.py, but KNN and SVM come from cuML (RAPIDS) and
-XGBoost targets the GPU. Kept separate from models.py so the archive/archive2
-pipelines keep running the CPU sklearn estimators unchanged.
-
-Two things differ from the sklearn versions and are load-bearing:
-
-* cuML's KNeighborsClassifier accepts `p` but silently ignores it -- the argument is
-  swallowed by **kwargs and the distance is always Euclidean. Distance choice has to go
-  through `metric`, which was verified to reproduce sklearn's p=1/p=2 results exactly.
-  training_utils_archive3.py therefore grids over `model__metric`, not `model__p`.
-* MLPClassifier has no GPU implementation in either sklearn or cuML, so it stays on CPU.
-
-PCA is deliberately NOT taken from cuML: cuML's PCA requires an integer n_components and
-raises on the fractional variance targets in PCA_VARIANCE_OPTIONS. It runs on 14-21
-features here, so keeping sklearn's costs nothing.
-"""
 from cuml.neighbors import KNeighborsClassifier as KNeighborsClassifierGPU
 from cuml.svm import SVC as SVCGPU
 from sklearn.neural_network import MLPClassifier

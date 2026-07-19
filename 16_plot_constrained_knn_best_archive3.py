@@ -1,11 +1,4 @@
-"""Two single-metric figures for the constrained-feature-selection results, where KNN is
-shown only ONCE -- at the subset where it is best (by that figure's metric), among the
-trimmed subsets (all-21 is the full-feature reference and is excluded from KNN's 'best').
 
-SVM / XGBoost / MLP are drawn across every subset as usual; KNN occupies its fixed slot
-only at its best subset, so its bar is directly comparable to the others there. One image
-per metric (Test F1, ROC AUC), as requested.
-"""
 import matplotlib
 
 matplotlib.use("Agg")
@@ -16,14 +9,14 @@ import pandas as pd
 from config_archive3 import OUTPUT_DIR, PLOTS_DIR
 
 MODEL_COLORS = {"KNN": "#3F72C4", "SVM": "#4C924C", "XGBoost": "#E080B0", "MLP": "#E8A93A"}
-MODELS = list(MODEL_COLORS)              # slot order (KNN leftmost, as in the other charts)
-OTHER = ["SVM", "XGBoost", "MLP"]        # models drawn on every subset
+MODELS = list(MODEL_COLORS)              
+OTHER = ["SVM", "XGBoost", "MLP"]        
 
 COMBO_ORDER = [
     "3C+1L", "3C+2L", "4C+2L", "5C+2L", "4C+3L", "5C+3L",
     "6C+2L", "6C+3L", "7C+3L", "5C+5L", "all-21 (both parts)",
 ]
-TRIMMED = [c for c in COMBO_ORDER if not c.startswith("all-21")]  # KNN-best candidates
+TRIMMED = [c for c in COMBO_ORDER if not c.startswith("all-21")]  
 WIDTH = 0.2
 
 
@@ -52,7 +45,7 @@ def make_figure(df, piv, klab, value_col, title, ylabel, ymax, ystep, out):
                       edgecolor="white", linewidth=0.6, zorder=3)
         ax.bar_label(bars, fmt="%.3f", padding=2, fontsize=6, rotation=90)
 
-    # call out the single KNN bar (text placed directly above it, short arrow down)
+    
     kb_x = COMBO_ORDER.index(knn_best) + (0 - (len(MODELS) - 1) / 2) * WIDTH
     kb_y = piv.loc[knn_best, (value_col, "KNN")]
     kn = int(df[(df.model == "KNN") & (df.combo == knn_best)]["n_neighbors"].iloc[0])
@@ -72,7 +65,7 @@ def make_figure(df, piv, klab, value_col, title, ylabel, ymax, ystep, out):
     for s in ("top", "right"):
         ax.spines[s].set_visible(False)
     ax.margins(x=0.01)
-    # legend below the plot so it never collides with the titles
+   
     ax.legend(loc="upper center", ncol=4, frameon=False, bbox_to_anchor=(0.5, -0.09), fontsize=11)
 
     fig.suptitle("Constrained feature selection on Merged (top clinical + top lifestyle, both parts kept)",

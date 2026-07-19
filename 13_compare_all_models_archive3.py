@@ -1,18 +1,4 @@
-"""Comparison plots that put ALL six archive3 models on one figure.
 
-Four models (KNN, SVM, XGBoost, MLP) come from the main PCA pipeline
-(merged_results_pca.csv). The two later additions -- PyTorch-LateFusion and
-CatBoost -- were trained separately and land in extra_models_results.csv. This
-script merges both sources for the Merged dataset (the only dataset the two new
-models were trained on) and draws:
-
-  * one bar chart per metric (all_models_<metric>.png), 6 models sorted best->worst
-  * one grouped overview (all_models_comparison_grouped.png), metrics x models
-
-All six are evaluated on the identical 50,736-row test set (same shared split),
-so the bars are directly comparable. The base four run the StandardScaler->PCA->
-SMOTE pipeline; the two new ones run as configured (no PCA) -- noted in the caption.
-"""
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -21,8 +7,6 @@ from config_archive3 import OUTPUT_DIR, PLOTS_DIR
 
 METRICS = ["Accuracy", "Precision", "Recall", "F1", "ROC_AUC"]
 
-# Fixed model -> color map (dataviz categorical slots 1-6). Color follows the
-# model, never its rank, so a model looks the same in every chart here.
 MODEL_ORDER = ["KNN", "SVM", "XGBoost", "MLP", "PyTorch-LateFusion", "CatBoost"]
 MODEL_COLORS = {
     "KNN": "#2a78d6",                 # blue
@@ -33,14 +17,14 @@ MODEL_COLORS = {
     "CatBoost": "#eb6834",            # orange
 }
 
-# Chart chrome / ink (dataviz light-surface tokens).
+
 SURFACE = "#fcfcfb"
 INK_PRIMARY = "#0b0b0b"
 INK_SECONDARY = "#52514e"
 INK_MUTED = "#898781"
 GRID = "#e1e0d9"
 BASELINE = "#c3c2b7"
-BAR_EDGE = "#0b0b0b"  # hairline ring so light fills (magenta/yellow/aqua) keep an edge on white
+BAR_EDGE = "#0b0b0b"  
 
 plt.rcParams.update({
     "font.family": "DejaVu Sans",

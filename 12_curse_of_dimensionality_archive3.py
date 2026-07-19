@@ -1,18 +1,4 @@
-"""Curse-of-dimensionality experiment on the archive3 Merged dataset.
 
-Adds features one at a time in XGBoost-importance order and tracks test performance.
-KNN is distance-based and is the classic victim of the curse: past a small number of
-features, extra (weak, low-signal) dimensions dilute the distance metric and accuracy
-DROPS. XGBoost is shown alongside as the robust contrast -- tree splits ignore useless
-features, so it barely moves.
-
-Constraint for the thesis: the useful subset must keep the clinical+lifestyle fusion, so
-at least one lifestyle feature is required. Smoker is the strongest lifestyle feature
-(rank 9 of 21); a lifestyle-compliant recommended subset is reported explicitly.
-
-Consistent with the rest of archive3: same shared 80/20 split, SMOTE on training folds
-only, decision threshold tuned on a held-out validation slice (never the test set).
-"""
 import json
 import numpy as np
 import pandas as pd
@@ -26,9 +12,7 @@ from xgboost import XGBClassifier
 
 from config_archive3 import ID_COLUMN, LIFESTYLE_COLUMNS, OUTPUT_DIR, RANDOM_STATE, TARGET_COLUMN, TEST_SIZE
 
-# XGBoost gain ranking on Merged (most -> least important). Lifestyle features in CAPS
-# in comments: Smoker(9), HvyAlcohol(14), Veggies(16), Fruits(17), PhysActivity(18),
-# NoDocbcCost(20), AnyHealthcare(21).
+
 RANKED = [
     "Age", "HighBP", "GenHlth", "HighChol", "Sex", "PhysHlth", "Income", "BMI",
     "Smoker", "Education", "DiffWalk", "MentHlth", "Stroke", "HvyAlcoholConsump",
@@ -64,7 +48,7 @@ def make_pipeline(model):
 
 
 def fit_knn(feats, tr, va, te, y_tr, y_va, y_te):
-    # tune n_neighbors on validation F1 (optimal K grows with dimensionality)
+   
     best = None
     for n in KNN_NEIGHBOR_GRID:
         pipe = make_pipeline(KNeighborsClassifierGPU(n_neighbors=n, weights="distance", metric="manhattan"))
@@ -126,7 +110,7 @@ def main():
         print(f"\n{m}: peak F1={peak['f1']} at k={peak['k']} ({peak['added']} last) | "
               f"full(k=21) F1={full['f1']} | gain from trimming = {peak['f1']-full['f1']:+.4f}")
 
-    # lifestyle-compliant recommended subset: KNN peak features, ensure >=1 lifestyle
+ 
     knn_peak = max(curves["KNN"], key=lambda r: r["f1"])
     rec = RANKED[:knn_peak["k"]]
     if not any(f in LIFESTYLE_COLUMNS for f in rec):
