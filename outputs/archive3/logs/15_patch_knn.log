@@ -1,0 +1,28 @@
+train=172502 val=30442 test=50736
+/home/dotand/roni/15_patch_knn_gridsearch_archive3.py:107: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined = pd.concat([kept, pd.DataFrame(new_knn)], ignore_index=True)
+all-21 (both parts)  KNN (k=21) | F1=0.3578 AUC=0.7890 | best K=21 metric=manhattan
+3C+1L                KNN (k= 4) | F1=0.2974 AUC=0.7010 | best K=5 metric=manhattan
+3C+2L                KNN (k= 5) | F1=0.2908 AUC=0.6967 | best K=5 metric=manhattan
+4C+2L                KNN (k= 6) | F1=0.3171 AUC=0.6960 | best K=5 metric=euclidean
+5C+2L                KNN (k= 7) | F1=0.3148 AUC=0.7234 | best K=5 metric=manhattan
+5C+3L                KNN (k= 8) | F1=0.3266 AUC=0.7152 | best K=5 metric=manhattan
+4C+3L                KNN (k= 7) | F1=0.2959 AUC=0.6814 | best K=5 metric=euclidean
+6C+2L                KNN (k= 8) | F1=0.3499 AUC=0.7623 | best K=21 metric=manhattan
+6C+3L                KNN (k= 9) | F1=0.3484 AUC=0.7575 | best K=21 metric=manhattan
+7C+3L                KNN (k=10) | F1=0.3254 AUC=0.7193 | best K=21 metric=manhattan
+5C+5L                KNN (k=10) | F1=0.3555 AUC=0.7760 | best K=21 metric=manhattan
+
+patched outputs/archive3/constrained_feature_selection_all_models.csv (11 KNN rows replaced via GridSearchCV)
+
+=== KNN retained F1 vs all-21 (0.3578) ===
+  3C+1L    k= 4 | F1=0.2974 ( 83.1%) AUC=0.7010 | K=5 manhattan
+  3C+2L    k= 5 | F1=0.2908 ( 81.3%) AUC=0.6967 | K=5 manhattan
+  4C+2L    k= 6 | F1=0.3171 ( 88.6%) AUC=0.6960 | K=5 euclidean
+  5C+2L    k= 7 | F1=0.3148 ( 88.0%) AUC=0.7234 | K=5 manhattan
+  5C+3L    k= 8 | F1=0.3266 ( 91.3%) AUC=0.7152 | K=5 manhattan
+  4C+3L    k= 7 | F1=0.2959 ( 82.7%) AUC=0.6814 | K=5 euclidean
+  6C+2L    k= 8 | F1=0.3499 ( 97.8%) AUC=0.7623 | K=21 manhattan
+  6C+3L    k= 9 | F1=0.3484 ( 97.4%) AUC=0.7575 | K=21 manhattan
+  7C+3L    k=10 | F1=0.3254 ( 90.9%) AUC=0.7193 | K=21 manhattan
+  5C+5L    k=10 | F1=0.3555 ( 99.4%) AUC=0.7760 | K=21 manhattan

@@ -1,0 +1,10 @@
+﻿k,features,threshold,accuracy,precision,recall,f1,roc_auc
+1,Age,0.5873,0.6783,0.1733,0.6405,0.2728,0.7229
+2,"Age,HighBP",0.6796,0.7854,0.2188,0.4976,0.304,0.7617
+3,"Age,HighBP,GenHlth",0.7077,0.8402,0.295,0.5009,0.3713,0.8174
+4,"Age,HighBP,GenHlth,HighChol",0.7145,0.8403,0.3016,0.5286,0.3841,0.8249
+5,"Age,HighBP,GenHlth,HighChol,Sex",0.7272,0.8603,0.3351,0.4913,0.3984,0.8351
+7,"Age,HighBP,GenHlth,HighChol,Sex,PhysHlth,Income",0.5805,0.8331,0.2964,0.5623,0.3882,0.8279
+10,"Age,HighBP,GenHlth,HighChol,Sex,PhysHlth,Income,BMI,Smoker,Education",0.3415,0.8458,0.3155,0.5451,0.3997,0.8353
+14,"Age,HighBP,GenHlth,HighChol,Sex,PhysHlth,Income,BMI,Smoker,Education,DiffWalk,MentHlth,Stroke,HvyAlcoholConsump",0.3284,0.8563,0.3338,0.5281,0.409,0.8418
+21,"Age,HighBP,GenHlth,HighChol,Sex,PhysHlth,Income,BMI,Smoker,Education,DiffWalk,MentHlth,Stroke,HvyAlcoholConsump,CholCheck,Veggies,Fruits,PhysActivity,Diabetes,NoDocbcCost,AnyHealthcare",0.297,0.8623,0.3449,0.5133,0.4126,0.844

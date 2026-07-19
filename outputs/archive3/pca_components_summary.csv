@@ -1,0 +1,13 @@
+﻿Dataset,Model,Original_Features,PCA_Components,Explained_Variance
+Clinical,KNN,14,14,1.0
+Clinical,SVM,14,14,1.0
+Clinical,XGBoost,14,14,1.0
+Clinical,MLP,14,12,0.9345296533397226
+Lifestyle,KNN,7,7,1.0
+Lifestyle,SVM,7,7,1.0
+Lifestyle,XGBoost,7,7,1.0
+Lifestyle,MLP,7,7,1.0
+Merged,KNN,21,21,1.0000000000000002
+Merged,SVM,21,21,1.0
+Merged,XGBoost,21,21,1.0000000000000002
+Merged,MLP,21,17,0.9056840833378466

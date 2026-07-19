@@ -1,0 +1,93 @@
+
+Dataset: Merged | features=21 | train=202944 | test=50736 | mode=PCA
+Training KNN with StandardScaler + PCA (GridSearchCV)...
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/xgboost/core.py:553: UserWarning: [14:59:23] WARNING: /__w/xgboost/xgboost/src/common/error_msg.cc:62: Falling back to prediction using DMatrix due to mismatched devices. This might lead to higher memory usage and slower performance. XGBoost is running on: cuda:0, while the input data is on: cpu.
+Potential solutions:
+- Use a data structure that matches the device ordinal in the booster.
+- Set the device for booster before call to inplace_predict.
+
+This warning will only be shown once.
+
+  return func(**kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/xgboost/core.py:553: UserWarning: [14:59:23] WARNING: /__w/xgboost/xgboost/src/common/error_msg.cc:62: Falling back to prediction using DMatrix due to mismatched devices. This might lead to higher memory usage and slower performance. XGBoost is running on: cuda:0, while the input data is on: cpu.
+Potential solutions:
+- Use a data structure that matches the device ordinal in the booster.
+- Set the device for booster before call to inplace_predict.
+
+This warning will only be shown once.
+
+  return func(**kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/xgboost/core.py:553: UserWarning: [14:59:23] WARNING: /__w/xgboost/xgboost/src/common/error_msg.cc:62: Falling back to prediction using DMatrix due to mismatched devices. This might lead to higher memory usage and slower performance. XGBoost is running on: cuda:0, while the input data is on: cpu.
+Potential solutions:
+- Use a data structure that matches the device ordinal in the booster.
+- Set the device for booster before call to inplace_predict.
+
+This warning will only be shown once.
+
+  return func(**kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/xgboost/core.py:553: UserWarning: [14:59:23] WARNING: /__w/xgboost/xgboost/src/common/error_msg.cc:62: Falling back to prediction using DMatrix due to mismatched devices. This might lead to higher memory usage and slower performance. XGBoost is running on: cuda:0, while the input data is on: cpu.
+Potential solutions:
+- Use a data structure that matches the device ordinal in the booster.
+- Set the device for booster before call to inplace_predict.
+
+This warning will only be shown once.
+
+  return func(**kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/xgboost/core.py:553: UserWarning: [14:59:35] WARNING: /__w/xgboost/xgboost/src/common/error_msg.cc:62: Falling back to prediction using DMatrix due to mismatched devices. This might lead to higher memory usage and slower performance. XGBoost is running on: cuda:0, while the input data is on: cpu.
+Potential solutions:
+- Use a data structure that matches the device ordinal in the booster.
+- Set the device for booster before call to inplace_predict.
+
+This warning will only be shown once.
+
+  return func(**kwargs)
+PCA_Components=21 | Threshold=0.680 | CV_F1=0.3361 | Test_F1=0.3512 | AUC=0.7873
+SVM: training on a stratified subsample of 40000 / 202944 rows
+Training SVM with StandardScaler + PCA (GridSearchCV)...
+PCA_Components=21 | Threshold=0.501 | CV_F1=0.3700 | Test_F1=0.3686 | AUC=0.8019
+Training XGBoost with StandardScaler + PCA (GridSearchCV)...
+PCA_Components=21 | Threshold=0.693 | CV_F1=0.3719 | Test_F1=0.4065 | AUC=0.8420
+Training MLP with StandardScaler + PCA (GridSearchCV)...
+PCA_Components=17 | Threshold=0.720 | CV_F1=0.3562 | Test_F1=0.3880 | AUC=0.8248

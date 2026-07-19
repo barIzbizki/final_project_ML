@@ -1,0 +1,125 @@
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/xgboost/core.py:553: UserWarning: [23:20:12] WARNING: /__w/xgboost/xgboost/src/common/error_msg.cc:62: Falling back to prediction using DMatrix due to mismatched devices. This might lead to higher memory usage and slower performance. XGBoost is running on: cuda:0, while the input data is on: cpu.
+Potential solutions:
+- Use a data structure that matches the device ordinal in the booster.
+- Set the device for booster before call to inplace_predict.
+
+This warning will only be shown once.
+
+  return func(**kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+/home/dotand/roni/venv/lib/python3.12/site-packages/cuml/internals/outputs.py:433: FutureWarning: The `probability` parameter is deprecated and will be removed in cuML version 26.08. Use `CalibratedClassifierCV(SVC(), ensemble=False)` from `sklearn.calibration` instead.
+  res = func(*args, **kwargs)
+train=172502 val=30442 test=50736
+all-21 (both parts)  KNN      (k=21) | F1=0.3833 AUC=0.8109 K=71 |   3.8s
+all-21 (both parts)  SVM      (k=21) | F1=0.3702 AUC=0.8033 |   9.2s
+all-21 (both parts)  XGBoost  (k=21) | F1=0.4149 AUC=0.8445 |   1.0s
+all-21 (both parts)  MLP      (k=21) | F1=0.3699 AUC=0.8034 | 119.6s
+3C+1L                KNN      (k= 4) | F1=0.3783 AUC=0.8025 K=71 |   2.6s
+3C+1L                SVM      (k= 4) | F1=0.3751 AUC=0.7993 |  28.4s
+3C+1L                XGBoost  (k= 4) | F1=0.3835 AUC=0.8210 |   0.7s
+3C+1L                MLP      (k= 4) | F1=0.3844 AUC=0.8213 |  40.7s
+3C+2L                KNN      (k= 5) | F1=0.3722 AUC=0.7958 K=51 |   4.0s
+3C+2L                SVM      (k= 5) | F1=0.3779 AUC=0.8025 |  23.7s
+3C+2L                XGBoost  (k= 5) | F1=0.3827 AUC=0.8208 |   1.0s
+3C+2L                MLP      (k= 5) | F1=0.3846 AUC=0.8217 |  19.5s
+4C+2L                KNN      (k= 6) | F1=0.3712 AUC=0.8043 K=51 |   4.5s
+4C+2L                SVM      (k= 6) | F1=0.3913 AUC=0.8080 |  25.5s
+4C+2L                XGBoost  (k= 6) | F1=0.3821 AUC=0.8274 |   1.1s
+4C+2L                MLP      (k= 6) | F1=0.3865 AUC=0.8291 |  31.6s
+5C+2L                KNN      (k= 7) | F1=0.3784 AUC=0.8132 K=51 |   4.7s
+5C+2L                SVM      (k= 7) | F1=0.4027 AUC=0.8161 |  17.7s
+5C+2L                XGBoost  (k= 7) | F1=0.4089 AUC=0.8362 |   1.2s
+5C+2L                MLP      (k= 7) | F1=0.4066 AUC=0.8382 |  33.9s
+5C+3L                KNN      (k= 8) | F1=0.3735 AUC=0.8033 K=31 |   4.9s
+5C+3L                SVM      (k= 8) | F1=0.3998 AUC=0.8152 |  14.6s
+5C+3L                XGBoost  (k= 8) | F1=0.3988 AUC=0.8351 |   1.3s
+5C+3L                MLP      (k= 8) | F1=0.4049 AUC=0.8372 |  33.6s
+4C+3L                KNN      (k= 7) | F1=0.3638 AUC=0.8012 K=51 |   4.8s
+4C+3L                SVM      (k= 7) | F1=0.3859 AUC=0.8076 |  19.4s
+4C+3L                XGBoost  (k= 7) | F1=0.3819 AUC=0.8267 |   1.2s
+4C+3L                MLP      (k= 7) | F1=0.3854 AUC=0.8264 | 130.6s
+6C+2L                KNN      (k= 8) | F1=0.3555 AUC=0.7708 K=51 |   4.9s
+6C+2L                SVM      (k= 8) | F1=0.3998 AUC=0.8153 |  12.8s
+6C+2L                XGBoost  (k= 8) | F1=0.3957 AUC=0.8317 |   1.0s
+6C+2L                MLP      (k= 8) | F1=0.4024 AUC=0.8348 | 136.1s
+6C+3L                KNN      (k= 9) | F1=0.3467 AUC=0.7623 K=31 |   5.9s
+6C+3L                SVM      (k= 9) | F1=0.3986 AUC=0.8130 |  12.7s
+6C+3L                XGBoost  (k= 9) | F1=0.3945 AUC=0.8298 |   1.4s
+6C+3L                MLP      (k= 9) | F1=0.3957 AUC=0.8284 | 139.5s
+7C+3L                KNN      (k=10) | F1=0.3252 AUC=0.7156 K=71 |   5.9s
+7C+3L                SVM      (k=10) | F1=0.3893 AUC=0.8127 |  10.2s
+7C+3L                XGBoost  (k=10) | F1=0.3914 AUC=0.8291 |   1.6s
+7C+3L                MLP      (k=10) | F1=0.3849 AUC=0.8232 |  66.2s
+5C+5L                KNN      (k=10) | F1=0.3627 AUC=0.7819 K=31 |   6.7s
+5C+5L                SVM      (k=10) | F1=0.3960 AUC=0.8122 |  12.0s
+5C+5L                XGBoost  (k=10) | F1=0.3971 AUC=0.8310 |   1.0s
+5C+5L                MLP      (k=10) | F1=0.4004 AUC=0.8292 | 146.1s
+
+=== retained F1 vs all-21, per model ===
+
+KNN: all-21 F1=0.3833
+  3C+1L    k= 4 | F1=0.3783 ( 98.7%) AUC=0.8025
+  3C+2L    k= 5 | F1=0.3722 ( 97.1%) AUC=0.7958
+  4C+2L    k= 6 | F1=0.3712 ( 96.8%) AUC=0.8043
+  5C+2L    k= 7 | F1=0.3784 ( 98.7%) AUC=0.8132 <-- best trimmed
+  5C+3L    k= 8 | F1=0.3735 ( 97.4%) AUC=0.8033
+  4C+3L    k= 7 | F1=0.3638 ( 94.9%) AUC=0.8012
+  6C+2L    k= 8 | F1=0.3555 ( 92.7%) AUC=0.7708
+  6C+3L    k= 9 | F1=0.3467 ( 90.5%) AUC=0.7623
+  7C+3L    k=10 | F1=0.3252 ( 84.8%) AUC=0.7156
+  5C+5L    k=10 | F1=0.3627 ( 94.6%) AUC=0.7819
+
+SVM: all-21 F1=0.3702
+  3C+1L    k= 4 | F1=0.3751 (101.3%) AUC=0.7993
+  3C+2L    k= 5 | F1=0.3779 (102.1%) AUC=0.8025
+  4C+2L    k= 6 | F1=0.3913 (105.7%) AUC=0.8080
+  5C+2L    k= 7 | F1=0.4027 (108.8%) AUC=0.8161 <-- best trimmed
+  5C+3L    k= 8 | F1=0.3998 (108.0%) AUC=0.8152
+  4C+3L    k= 7 | F1=0.3859 (104.2%) AUC=0.8076
+  6C+2L    k= 8 | F1=0.3998 (108.0%) AUC=0.8153
+  6C+3L    k= 9 | F1=0.3986 (107.7%) AUC=0.8130
+  7C+3L    k=10 | F1=0.3893 (105.2%) AUC=0.8127
+  5C+5L    k=10 | F1=0.3960 (107.0%) AUC=0.8122
+
+XGBoost: all-21 F1=0.4149
+  3C+1L    k= 4 | F1=0.3835 ( 92.4%) AUC=0.8210
+  3C+2L    k= 5 | F1=0.3827 ( 92.2%) AUC=0.8208
+  4C+2L    k= 6 | F1=0.3821 ( 92.1%) AUC=0.8274
+  5C+2L    k= 7 | F1=0.4089 ( 98.6%) AUC=0.8362 <-- best trimmed
+  5C+3L    k= 8 | F1=0.3988 ( 96.1%) AUC=0.8351
+  4C+3L    k= 7 | F1=0.3819 ( 92.0%) AUC=0.8267
+  6C+2L    k= 8 | F1=0.3957 ( 95.4%) AUC=0.8317
+  6C+3L    k= 9 | F1=0.3945 ( 95.1%) AUC=0.8298
+  7C+3L    k=10 | F1=0.3914 ( 94.3%) AUC=0.8291
+  5C+5L    k=10 | F1=0.3971 ( 95.7%) AUC=0.8310
+
+MLP: all-21 F1=0.3699
+  3C+1L    k= 4 | F1=0.3844 (103.9%) AUC=0.8213
+  3C+2L    k= 5 | F1=0.3846 (104.0%) AUC=0.8217
+  4C+2L    k= 6 | F1=0.3865 (104.5%) AUC=0.8291
+  5C+2L    k= 7 | F1=0.4066 (109.9%) AUC=0.8382 <-- best trimmed
+  5C+3L    k= 8 | F1=0.4049 (109.5%) AUC=0.8372
+  4C+3L    k= 7 | F1=0.3854 (104.2%) AUC=0.8264
+  6C+2L    k= 8 | F1=0.4024 (108.8%) AUC=0.8348
+  6C+3L    k= 9 | F1=0.3957 (107.0%) AUC=0.8284
+  7C+3L    k=10 | F1=0.3849 (104.1%) AUC=0.8232
+  5C+5L    k=10 | F1=0.4004 (108.2%) AUC=0.8292

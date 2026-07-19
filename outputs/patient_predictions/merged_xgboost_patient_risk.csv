@@ -1,0 +1,201 @@
+﻿patient_id,Actual_Label,Actual_Status,Predicted_Label,Predicted_Status,Risk_Probability,Risk_Percentage,Risk_Level,Correct_Prediction
+373,1,Heart Disease,1,Heart Disease,0.9992448,99.924484,Very High,True
+917,1,Heart Disease,1,Heart Disease,0.9989409,99.89409,Very High,True
+578,1,Heart Disease,1,Heart Disease,0.9987558,99.87558,Very High,True
+429,1,Heart Disease,1,Heart Disease,0.9987519,99.87519,Very High,True
+456,1,Heart Disease,1,Heart Disease,0.9986507,99.865074,Very High,True
+160,1,Heart Disease,1,Heart Disease,0.9984554,99.84554,Very High,True
+546,1,Heart Disease,1,Heart Disease,0.9979723,99.79723,Very High,True
+887,1,Heart Disease,1,Heart Disease,0.99626726,99.626724,Very High,True
+426,1,Heart Disease,1,Heart Disease,0.99381024,99.38103,Very High,True
+113,1,Heart Disease,1,Heart Disease,0.9935999,99.359985,Very High,True
+580,1,Heart Disease,1,Heart Disease,0.9932319,99.32319,Very High,True
+403,1,Heart Disease,1,Heart Disease,0.99288917,99.28892,Very High,True
+868,1,Heart Disease,1,Heart Disease,0.9928382,99.28382,Very High,True
+362,1,Heart Disease,1,Heart Disease,0.99200284,99.20029,Very High,True
+123,1,Heart Disease,1,Heart Disease,0.9909911,99.09911,Very High,True
+370,1,Heart Disease,1,Heart Disease,0.98991954,98.99195,Very High,True
+11,1,Heart Disease,1,Heart Disease,0.98920935,98.92094,Very High,True
+304,1,Heart Disease,1,Heart Disease,0.9880606,98.80606,Very High,True
+330,1,Heart Disease,1,Heart Disease,0.9879423,98.79423,Very High,True
+669,1,Heart Disease,1,Heart Disease,0.98580754,98.58076,Very High,True
+364,1,Heart Disease,1,Heart Disease,0.9853424,98.53424,Very High,True
+754,1,Heart Disease,1,Heart Disease,0.98457134,98.45713,Very High,True
+826,1,Heart Disease,1,Heart Disease,0.98348594,98.348595,Very High,True
+889,1,Heart Disease,1,Heart Disease,0.9803405,98.03405,Very High,True
+178,1,Heart Disease,1,Heart Disease,0.97624856,97.624855,Very High,True
+734,1,Heart Disease,1,Heart Disease,0.9724219,97.24219,Very High,True
+501,1,Heart Disease,1,Heart Disease,0.9625611,96.2561,Very High,True
+526,1,Heart Disease,1,Heart Disease,0.9620355,96.203545,Very High,True
+652,1,Heart Disease,1,Heart Disease,0.9590465,95.90465,Very High,True
+784,1,Heart Disease,1,Heart Disease,0.9528401,95.28401,Very High,True
+423,1,Heart Disease,1,Heart Disease,0.95099413,95.09941,Very High,True
+27,1,Heart Disease,1,Heart Disease,0.9456014,94.56014,Very High,True
+812,1,Heart Disease,1,Heart Disease,0.94245094,94.245094,Very High,True
+511,1,Heart Disease,1,Heart Disease,0.9412822,94.12822,Very High,True
+433,1,Heart Disease,1,Heart Disease,0.930562,93.0562,Very High,True
+638,0,No Heart Disease,1,Heart Disease,0.92425567,92.42557,Very High,False
+779,1,Heart Disease,1,Heart Disease,0.91784656,91.78465,Very High,True
+78,1,Heart Disease,1,Heart Disease,0.9139686,91.396866,Very High,True
+884,1,Heart Disease,1,Heart Disease,0.9086044,90.860435,Very High,True
+38,1,Heart Disease,1,Heart Disease,0.90688753,90.68875,Very High,True
+37,1,Heart Disease,1,Heart Disease,0.9019995,90.19995,Very High,True
+499,1,Heart Disease,1,Heart Disease,0.8882673,88.82673,Very High,True
+833,0,No Heart Disease,1,Heart Disease,0.8818949,88.18949,Very High,False
+805,0,No Heart Disease,1,Heart Disease,0.8801725,88.01725,Very High,False
+363,1,Heart Disease,1,Heart Disease,0.8712844,87.12844,Very High,True
+872,1,Heart Disease,1,Heart Disease,0.8642026,86.420265,Very High,True
+290,1,Heart Disease,1,Heart Disease,0.8569752,85.69752,Very High,True
+781,1,Heart Disease,1,Heart Disease,0.85000175,85.000175,Very High,True
+1,1,Heart Disease,1,Heart Disease,0.8395981,83.95981,Very High,True
+416,1,Heart Disease,1,Heart Disease,0.8368968,83.689674,Very High,True
+29,0,No Heart Disease,1,Heart Disease,0.81477106,81.477104,Very High,False
+414,1,Heart Disease,1,Heart Disease,0.80661064,80.661064,Very High,True
+968,0,No Heart Disease,1,Heart Disease,0.7988819,79.88819,High,False
+530,1,Heart Disease,1,Heart Disease,0.79870695,79.8707,High,True
+553,1,Heart Disease,1,Heart Disease,0.7906129,79.06129,High,True
+896,1,Heart Disease,1,Heart Disease,0.7882973,78.82973,High,True
+799,1,Heart Disease,1,Heart Disease,0.7845458,78.454575,High,True
+209,1,Heart Disease,1,Heart Disease,0.7686384,76.86384,High,True
+591,1,Heart Disease,1,Heart Disease,0.73839885,73.83988,High,True
+215,0,No Heart Disease,1,Heart Disease,0.73401654,73.40166,High,False
+583,1,Heart Disease,1,Heart Disease,0.7328297,73.28297,High,True
+840,1,Heart Disease,1,Heart Disease,0.69657314,69.65731,High,True
+4,0,No Heart Disease,1,Heart Disease,0.6597915,65.97916,High,False
+749,0,No Heart Disease,1,Heart Disease,0.61886,61.886,High,False
+23,1,Heart Disease,1,Heart Disease,0.60161364,60.161366,High,True
+324,1,Heart Disease,1,Heart Disease,0.5951894,59.51894,High,True
+996,1,Heart Disease,1,Heart Disease,0.58753794,58.753796,High,True
+421,1,Heart Disease,1,Heart Disease,0.5803104,58.03104,High,True
+276,1,Heart Disease,1,Heart Disease,0.56946605,56.946606,High,True
+100,1,Heart Disease,1,Heart Disease,0.5584803,55.848034,High,True
+802,0,No Heart Disease,1,Heart Disease,0.5399215,53.992153,High,False
+888,1,Heart Disease,1,Heart Disease,0.5374286,53.742863,High,True
+866,1,Heart Disease,1,Heart Disease,0.52713305,52.713306,High,True
+930,1,Heart Disease,1,Heart Disease,0.51980716,51.980717,High,True
+794,0,No Heart Disease,1,Heart Disease,0.5132682,51.326817,High,False
+316,0,No Heart Disease,1,Heart Disease,0.5077001,50.770008,High,False
+375,1,Heart Disease,0,No Heart Disease,0.484586,48.4586,Medium,False
+94,1,Heart Disease,0,No Heart Disease,0.47979203,47.979202,Medium,False
+928,1,Heart Disease,0,No Heart Disease,0.45964047,45.964046,Medium,False
+288,0,No Heart Disease,0,No Heart Disease,0.45789325,45.789326,Medium,True
+360,0,No Heart Disease,0,No Heart Disease,0.45083725,45.083725,Medium,True
+90,0,No Heart Disease,0,No Heart Disease,0.41913855,41.913857,Medium,True
+357,1,Heart Disease,0,No Heart Disease,0.41411686,41.411686,Medium,False
+622,1,Heart Disease,0,No Heart Disease,0.381363,38.1363,Medium,False
+707,1,Heart Disease,0,No Heart Disease,0.35669258,35.66926,Medium,False
+190,0,No Heart Disease,0,No Heart Disease,0.35286286,35.286285,Medium,True
+924,0,No Heart Disease,0,No Heart Disease,0.3457155,34.57155,Medium,True
+617,0,No Heart Disease,0,No Heart Disease,0.3251196,32.511963,Medium,True
+453,0,No Heart Disease,0,No Heart Disease,0.30205435,30.205435,Medium,True
+940,0,No Heart Disease,0,No Heart Disease,0.29947877,29.947876,Medium,True
+183,0,No Heart Disease,0,No Heart Disease,0.28792772,28.792772,Medium,True
+57,1,Heart Disease,0,No Heart Disease,0.25932905,25.932905,Medium,False
+342,1,Heart Disease,0,No Heart Disease,0.2571419,25.71419,Medium,False
+353,0,No Heart Disease,0,No Heart Disease,0.25156406,25.156406,Medium,True
+684,0,No Heart Disease,0,No Heart Disease,0.24784485,24.784485,Medium,True
+816,0,No Heart Disease,0,No Heart Disease,0.24324547,24.324547,Medium,True
+777,0,No Heart Disease,0,No Heart Disease,0.23192598,23.192598,Medium,True
+461,0,No Heart Disease,0,No Heart Disease,0.22340827,22.340826,Medium,True
+703,0,No Heart Disease,0,No Heart Disease,0.21886018,21.886019,Medium,True
+341,0,No Heart Disease,0,No Heart Disease,0.20931204,20.931204,Medium,True
+479,0,No Heart Disease,0,No Heart Disease,0.20835538,20.835539,Medium,True
+919,1,Heart Disease,0,No Heart Disease,0.20460413,20.460413,Medium,False
+570,0,No Heart Disease,0,No Heart Disease,0.20390552,20.390553,Medium,True
+99,0,No Heart Disease,0,No Heart Disease,0.18483044,18.483044,Low,True
+417,0,No Heart Disease,0,No Heart Disease,0.15772331,15.772331,Low,True
+761,0,No Heart Disease,0,No Heart Disease,0.15429893,15.4298935,Low,True
+973,0,No Heart Disease,0,No Heart Disease,0.14840288,14.840288,Low,True
+933,1,Heart Disease,0,No Heart Disease,0.14741181,14.74118,Low,False
+118,0,No Heart Disease,0,No Heart Disease,0.13503844,13.503843,Low,True
+295,0,No Heart Disease,0,No Heart Disease,0.13320836,13.320836,Low,True
+934,0,No Heart Disease,0,No Heart Disease,0.11667983,11.667983,Low,True
+232,0,No Heart Disease,0,No Heart Disease,0.114091516,11.409151,Low,True
+336,0,No Heart Disease,0,No Heart Disease,0.104514,10.451401,Low,True
+320,0,No Heart Disease,0,No Heart Disease,0.10112334,10.112334,Low,True
+935,0,No Heart Disease,0,No Heart Disease,0.09969111,9.9691105,Low,True
+65,0,No Heart Disease,0,No Heart Disease,0.098633476,9.863348,Low,True
+568,1,Heart Disease,0,No Heart Disease,0.089143,8.9143,Low,False
+498,0,No Heart Disease,0,No Heart Disease,0.088432364,8.843236,Low,True
+557,1,Heart Disease,0,No Heart Disease,0.083379745,8.337975,Low,False
+664,0,No Heart Disease,0,No Heart Disease,0.079353556,7.9353557,Low,True
+180,0,No Heart Disease,0,No Heart Disease,0.07840949,7.840949,Low,True
+475,0,No Heart Disease,0,No Heart Disease,0.07483634,7.4836345,Low,True
+181,0,No Heart Disease,0,No Heart Disease,0.06876101,6.8761015,Low,True
+750,0,No Heart Disease,0,No Heart Disease,0.06736345,6.736345,Low,True
+119,0,No Heart Disease,0,No Heart Disease,0.06592416,6.592416,Low,True
+533,0,No Heart Disease,0,No Heart Disease,0.05603522,5.6035223,Low,True
+876,0,No Heart Disease,0,No Heart Disease,0.055074185,5.5074186,Low,True
+449,0,No Heart Disease,0,No Heart Disease,0.05412485,5.412485,Low,True
+699,0,No Heart Disease,0,No Heart Disease,0.0528974,5.28974,Low,True
+507,0,No Heart Disease,0,No Heart Disease,0.050899964,5.0899963,Low,True
+354,0,No Heart Disease,0,No Heart Disease,0.05063379,5.0633793,Low,True
+634,0,No Heart Disease,0,No Heart Disease,0.05012639,5.012639,Low,True
+273,0,No Heart Disease,0,No Heart Disease,0.049554415,4.9554415,Low,True
+238,0,No Heart Disease,0,No Heart Disease,0.048144843,4.814484,Low,True
+776,0,No Heart Disease,0,No Heart Disease,0.04735543,4.735543,Low,True
+820,0,No Heart Disease,0,No Heart Disease,0.047192175,4.7192173,Low,True
+891,0,No Heart Disease,0,No Heart Disease,0.04509339,4.5093393,Low,True
+418,0,No Heart Disease,0,No Heart Disease,0.040782314,4.0782313,Low,True
+225,0,No Heart Disease,0,No Heart Disease,0.037594978,3.759498,Low,True
+280,0,No Heart Disease,0,No Heart Disease,0.03275626,3.2756262,Low,True
+593,0,No Heart Disease,0,No Heart Disease,0.03272104,3.2721038,Low,True
+8,1,Heart Disease,0,No Heart Disease,0.032427076,3.2427077,Low,False
+122,0,No Heart Disease,0,No Heart Disease,0.024578506,2.4578507,Low,True
+854,0,No Heart Disease,0,No Heart Disease,0.024516411,2.451641,Low,True
+677,0,No Heart Disease,0,No Heart Disease,0.023448402,2.3448403,Low,True
+804,0,No Heart Disease,0,No Heart Disease,0.023291366,2.3291366,Low,True
+772,0,No Heart Disease,0,No Heart Disease,0.022992222,2.2992222,Low,True
+558,0,No Heart Disease,0,No Heart Disease,0.021845847,2.1845846,Low,True
+384,0,No Heart Disease,0,No Heart Disease,0.020263948,2.0263948,Low,True
+142,0,No Heart Disease,0,No Heart Disease,0.019843053,1.9843053,Low,True
+561,0,No Heart Disease,0,No Heart Disease,0.018721588,1.8721588,Low,True
+68,0,No Heart Disease,0,No Heart Disease,0.018690445,1.8690444,Low,True
+376,0,No Heart Disease,0,No Heart Disease,0.015889226,1.5889225,Low,True
+636,0,No Heart Disease,0,No Heart Disease,0.015259,1.5259,Low,True
+744,0,No Heart Disease,0,No Heart Disease,0.014879864,1.4879863,Low,True
+482,0,No Heart Disease,0,No Heart Disease,0.014170835,1.4170835,Low,True
+909,0,No Heart Disease,0,No Heart Disease,0.01374033,1.374033,Low,True
+400,0,No Heart Disease,0,No Heart Disease,0.012846092,1.2846092,Low,True
+640,0,No Heart Disease,0,No Heart Disease,0.012322913,1.2322913,Low,True
+355,0,No Heart Disease,0,No Heart Disease,0.011401525,1.1401525,Low,True
+12,0,No Heart Disease,0,No Heart Disease,0.011095947,1.1095947,Low,True
+954,0,No Heart Disease,0,No Heart Disease,0.010070421,1.007042,Low,True
+359,0,No Heart Disease,0,No Heart Disease,0.009504791,0.95047915,Low,True
+658,0,No Heart Disease,0,No Heart Disease,0.008646508,0.8646508,Low,True
+43,0,No Heart Disease,0,No Heart Disease,0.0079967845,0.79967844,Low,True
+683,0,No Heart Disease,0,No Heart Disease,0.0075180344,0.75180346,Low,True
+337,0,No Heart Disease,0,No Heart Disease,0.0073426007,0.7342601,Low,True
+567,0,No Heart Disease,0,No Heart Disease,0.0073142145,0.7314215,Low,True
+988,0,No Heart Disease,0,No Heart Disease,0.0070772828,0.70772827,Low,True
+918,0,No Heart Disease,0,No Heart Disease,0.0067163375,0.6716338,Low,True
+450,0,No Heart Disease,0,No Heart Disease,0.006584455,0.6584455,Low,True
+603,0,No Heart Disease,0,No Heart Disease,0.005982113,0.5982113,Low,True
+227,0,No Heart Disease,0,No Heart Disease,0.005513312,0.55133116,Low,True
+404,0,No Heart Disease,0,No Heart Disease,0.0054941834,0.54941833,Low,True
+155,0,No Heart Disease,0,No Heart Disease,0.005493136,0.5493136,Low,True
+323,0,No Heart Disease,0,No Heart Disease,0.004640295,0.46402952,Low,True
+112,0,No Heart Disease,0,No Heart Disease,0.0042244145,0.42244145,Low,True
+835,0,No Heart Disease,0,No Heart Disease,0.004204703,0.4204703,Low,True
+44,0,No Heart Disease,0,No Heart Disease,0.0040012547,0.40012547,Low,True
+824,0,No Heart Disease,0,No Heart Disease,0.00394694,0.394694,Low,True
+730,0,No Heart Disease,0,No Heart Disease,0.0034158144,0.34158143,Low,True
+767,0,No Heart Disease,0,No Heart Disease,0.0031320327,0.31320328,Low,True
+163,0,No Heart Disease,0,No Heart Disease,0.0030949,0.30949,Low,True
+188,0,No Heart Disease,0,No Heart Disease,0.0030792158,0.3079216,Low,True
+430,0,No Heart Disease,0,No Heart Disease,0.0028335305,0.28335306,Low,True
+31,0,No Heart Disease,0,No Heart Disease,0.0027669182,0.27669182,Low,True
+992,0,No Heart Disease,0,No Heart Disease,0.0021739337,0.21739337,Low,True
+55,0,No Heart Disease,0,No Heart Disease,0.0021545577,0.21545577,Low,True
+539,0,No Heart Disease,0,No Heart Disease,0.0019717014,0.19717014,Low,True
+278,0,No Heart Disease,0,No Heart Disease,0.0018109418,0.18109418,Low,True
+611,0,No Heart Disease,0,No Heart Disease,0.0015804591,0.1580459,Low,True
+179,0,No Heart Disease,0,No Heart Disease,0.0015769267,0.15769267,Low,True
+131,0,No Heart Disease,0,No Heart Disease,0.0015589694,0.15589693,Low,True
+753,0,No Heart Disease,0,No Heart Disease,0.0014691133,0.14691132,Low,True
+505,0,No Heart Disease,0,No Heart Disease,0.0010234982,0.102349825,Low,True
+715,0,No Heart Disease,0,No Heart Disease,0.00076353963,0.07635396,Low,True
+743,0,No Heart Disease,0,No Heart Disease,0.00056329725,0.056329723,Low,True
+618,0,No Heart Disease,0,No Heart Disease,0.000550908,0.055090796,Low,True
+446,0,No Heart Disease,0,No Heart Disease,0.000487462,0.048746202,Low,True
+80,0,No Heart Disease,0,No Heart Disease,0.0004151711,0.04151711,Low,True

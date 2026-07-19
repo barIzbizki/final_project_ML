@@ -1,0 +1,12 @@
+Dataset: Merged | features=21 | train=202944 | test=50736 | scale_pos_weight=9.618
+Training CatBoost on Merged Dataset...
+0:	learn: 0.7561392	test: 0.7541216	best: 0.7541216 (0)	total: 13.4ms	remaining: 6.71s
+bestTest = 0.786285148
+bestIteration = 41
+Shrink model to first 42 iterations.
+
+CatBoost Results:
+Test F1-Score: 0.3710
+Test ROC-AUC: 0.8479
+
+F1=0.3710 | AUC=0.8479 | Accuracy=0.7368 | time=0.9s

@@ -1,0 +1,52 @@
+(253680, 23)
+patient_id              0
+HeartDiseaseorAttack    0
+HighBP                  0
+HighChol                0
+CholCheck               0
+BMI                     0
+Smoker                  0
+Stroke                  0
+Diabetes                0
+PhysActivity            0
+Fruits                  0
+Veggies                 0
+HvyAlcoholConsump       0
+AnyHealthcare           0
+NoDocbcCost             0
+GenHlth                 0
+MentHlth                0
+PhysHlth                0
+DiffWalk                0
+Sex                     0
+Age                     0
+Education               0
+Income                  0
+dtype: int64
+                         count           mean  ...        75%       max
+patient_id            253680.0  126840.500000  ...  190260.25  253680.0
+HeartDiseaseorAttack  253680.0       0.094186  ...       0.00       1.0
+HighBP                253680.0       0.429001  ...       1.00       1.0
+HighChol              253680.0       0.424121  ...       1.00       1.0
+CholCheck             253680.0       0.962670  ...       1.00       1.0
+BMI                   253680.0      28.382364  ...      31.00      98.0
+Smoker                253680.0       0.443169  ...       1.00       1.0
+Stroke                253680.0       0.040571  ...       0.00       1.0
+Diabetes              253680.0       0.296921  ...       0.00       2.0
+PhysActivity          253680.0       0.756544  ...       1.00       1.0
+Fruits                253680.0       0.634256  ...       1.00       1.0
+Veggies               253680.0       0.811420  ...       1.00       1.0
+HvyAlcoholConsump     253680.0       0.056197  ...       0.00       1.0
+AnyHealthcare         253680.0       0.951053  ...       1.00       1.0
+NoDocbcCost           253680.0       0.084177  ...       0.00       1.0
+GenHlth               253680.0       2.511392  ...       3.00       5.0
+MentHlth              253680.0       3.184772  ...       2.00      30.0
+PhysHlth              253680.0       4.242081  ...       3.00      30.0
+DiffWalk              253680.0       0.168224  ...       0.00       1.0
+Sex                   253680.0       0.440342  ...       1.00       1.0
+Age                   253680.0       8.032119  ...      10.00      13.0
+Education             253680.0       5.050434  ...       6.00       6.0
+Income                253680.0       6.053875  ...       8.00       8.0
+
+[23 rows x 8 columns]
+EDA saved in /home/dotand/roni/outputs/archive3/plots/eda
