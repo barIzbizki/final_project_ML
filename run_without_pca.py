@@ -35,18 +35,13 @@ from models import create_models
 from preprocessing import create_preprocessor
 
 
-# ============================================================
-# יצירת תיקיות
-# ============================================================
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 PLOTS_DIR.mkdir(parents=True, exist_ok=True)
 MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
 
-# ============================================================
-# פונקציות עזר להדפסה אסתטית
-# ============================================================
+
 
 def print_title(title: str, width: int = 92) -> None:
     """הדפסת כותרת ראשית ברורה."""
@@ -66,7 +61,7 @@ def print_results_table(
     results: list[dict],
     dataset_name: str,
 ) -> None:
-    """הדפסת טבלת תוצאות מסודרת עבור מאגר אחד."""
+    
     table = pd.DataFrame(results)[
         [
             "Model",
@@ -109,7 +104,7 @@ def print_results_table(
 
 
 def print_final_summary(results_df: pd.DataFrame) -> None:
-    """הדפסת טבלה מסכמת עבור כל המאגרים והמודלים."""
+   
     summary = results_df[
         [
             "Dataset",
@@ -148,20 +143,13 @@ def print_final_summary(results_df: pd.DataFrame) -> None:
     print("─" * 92)
 
 
-# ============================================================
-# Pipeline ללא PCA
-# ============================================================
+
 
 def create_pipeline_without_pca(
     X_train: pd.DataFrame,
     model: object,
 ) -> Pipeline:
-    """
-    סדר הפעולות:
-    טיפול בחסרים וקידוד -> StandardScaler -> Model
-
-    אין PCA ב-Pipeline הזה.
-    """
+ 
 
     return Pipeline(
         steps=[
@@ -172,17 +160,12 @@ def create_pipeline_without_pca(
     )
 
 
-# ============================================================
-# חלוקת Train/Test משותפת
-# ============================================================
+
 
 def create_shared_split(
     df: pd.DataFrame,
 ) -> tuple[set[int], set[int]]:
-    """
-    אותה חלוקת מטופלים משמשת את שלושת הניסויים,
-    כדי שההשוואה בין Clinical, Lifestyle ו-Merged תהיה הוגנת.
-    """
+    
 
     train_ids, test_ids = train_test_split(
         df[ID_COLUMN],
@@ -194,9 +177,7 @@ def create_shared_split(
     return set(train_ids), set(test_ids)
 
 
-# ============================================================
-# אימון והערכת כל המודלים ללא PCA
-# ============================================================
+
 
 def evaluate_dataset_without_pca(
     dataset_name: str,
@@ -204,10 +185,7 @@ def evaluate_dataset_without_pca(
     train_ids: set[int],
     test_ids: set[int],
 ) -> tuple[list[dict], list[dict]]:
-    """
-    אימון KNN, SVM, XGBoost ו-MLP ללא PCA.
-    """
-
+   
     train_df = df[df[ID_COLUMN].isin(train_ids)].copy()
     test_df = df[df[ID_COLUMN].isin(test_ids)].copy()
 
@@ -250,7 +228,6 @@ def evaluate_dataset_without_pca(
         matrix = confusion_matrix(y_test, predictions)
         fpr, tpr, _ = roc_curve(y_test, probabilities)
 
-        # מספר המאפיינים לאחר preprocessing ו-One-Hot Encoding
         processed_train = pipeline.named_steps[
             "preprocessing"
         ].transform(X_train)
@@ -324,19 +301,11 @@ def evaluate_dataset_without_pca(
     return results, roc_rows
 
 
-# ============================================================
-# יצירת שלושת המאגרים
-# ============================================================
 
 def create_experiment_datasets(
     full_df: pd.DataFrame,
 ) -> dict[str, pd.DataFrame]:
-    """
-    יוצר:
-    1. מאגר קליני
-    2. מאגר אורח חיים
-    3. מאגר מאוחד
-    """
+  
 
     clinical_df = full_df[
         [ID_COLUMN] + CLINICAL_COLUMNS + [TARGET_COLUMN]
@@ -360,9 +329,7 @@ def create_experiment_datasets(
     }
 
 
-# ============================================================
-# גרפי השוואה ללא PCA
-# ============================================================
+
 
 def create_comparison_plots(
     results_df: pd.DataFrame,
@@ -427,9 +394,7 @@ def create_comparison_plots(
 def create_roc_plot(
     roc_df: pd.DataFrame,
 ) -> None:
-    """
-    ROC Curves עבור המאגר המאוחד ללא PCA.
-    """
+    
 
     merged_roc = roc_df[
         roc_df["Dataset"] == "Merged"
@@ -473,17 +438,12 @@ def create_roc_plot(
     plt.close()
 
 
-# ============================================================
-# השוואת תוצאות עם PCA מול ללא PCA
-# ============================================================
+
 
 def compare_with_existing_pca_results(
     without_pca_df: pd.DataFrame,
 ) -> None:
-    """
-    אם הקובץ all_results_pca.csv כבר קיים,
-    נוצרת טבלת השוואה בין PCA לבין ללא PCA.
-    """
+    
 
     pca_results_path = OUTPUT_DIR / "all_results_pca.csv"
 
@@ -584,9 +544,6 @@ def compare_with_existing_pca_results(
     print("Difference near zero = almost no meaningful change")
 
 
-# ============================================================
-# הרצת הניסוי
-# ============================================================
 
 def main() -> None:
     full_df = load_original_data()

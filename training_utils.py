@@ -52,8 +52,7 @@ def fit_best_pipeline(X_train: pd.DataFrame, y_train: pd.Series, model: object, 
 
 
 def find_best_threshold(estimator, X_train: pd.DataFrame, y_train: pd.Series, cv) -> float:
-    # Out-of-fold probabilities on training data only: the threshold is never
-    # fit against X_test/y_test, so choosing it here cannot leak into the test score.
+    
     oof_probs = cross_val_predict(estimator, X_train, y_train, cv=cv, method="predict_proba", n_jobs=-1)[:, 1]
     precision, recall, thresholds = precision_recall_curve(y_train, oof_probs)
     f1_scores = 2 * precision * recall / (precision + recall + 1e-12)
