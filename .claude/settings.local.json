@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(find / -iname \"*פרוייקט סיום*\")",
-      "Read(//home/**)",
-      "Read(//home/dotand/**)"
-    ]
-  }
-}
